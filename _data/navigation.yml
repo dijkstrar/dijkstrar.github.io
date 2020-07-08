@@ -13,7 +13,7 @@ main:
   #  url: /portfolio/
         
   - title: "Portfolio"
-    url: /posts/
+    url: /portfolio/
     
   - title: "CV"
     url: /files/Renze_Dijkstra_CV.pdf
