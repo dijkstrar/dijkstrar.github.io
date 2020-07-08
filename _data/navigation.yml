@@ -16,7 +16,7 @@ main:
     url: /year-archive/
     
   - title: "CV"
-    url: https://github.com/dijkstrar/dijkstrar.github.io/blob/master/files/Renze_Dijkstra_CV.pdf
+    url: /files/Renze_Dijkstra_CV.pdf
   
   - title: "Brewing"
     url: /brewing/
