@@ -19,7 +19,7 @@ main:
     url: /files/Renze_Dijkstra_CV.pdf
   
   - title: "Brewing"
-    url: /brewing/
+    url: /brewing/brewing.md
     
  # - title: "Guide"
  #   url: /markdown/
