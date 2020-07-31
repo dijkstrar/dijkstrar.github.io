@@ -1,8 +1,11 @@
 ---
+layout: archive
 title: 'Brewing Beers'
-date: 2020-03
-permalink: /brewing/2020/03/beer/
+permalink: /brewing/
+author_profile: true
 ---
+
+{% include base_path %}
 
 Page is still under construction.
 
