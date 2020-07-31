@@ -1,7 +1,7 @@
 ---
 title: 'Brewing Beers'
-date: 2020
-permalink: /brewing/2020/beer/
+date: 2020-03
+permalink: /brewing/2020/03/beer/
 ---
 
 Page is still under construction.
