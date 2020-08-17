@@ -4,7 +4,6 @@ date: 2020-08-17
 permalink: /portfolio/2020/08/Monopoly/ 
 ---
 <script type="text/javascript" src="/src/brython.js"></script>
-<body onload="brython(1)">
 
 <script type="text/python">
 from browser import document, alert
@@ -14,8 +13,8 @@ def echo(ev):
 
 document["test"].bind("click", echo)
 </script>
+
 <p>Your name is : <input id="zone" autocomplete="off">
 <button id="test">click !</button>
-</body>
 
-TESTTTT
+TESTTTT2
