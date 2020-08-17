@@ -9,9 +9,7 @@ permalink: /portfolio/2020/08/Monopoly/
 
 <body onload="brython()">
 
-<div id="editor">
-    print(123)
-</div>
+
 <button id="btn">Run Python Test</button>
 
 
@@ -26,4 +24,9 @@ permalink: /portfolio/2020/08/Monopoly/
 
     doc['btn'].bind('click', exec_python)
 </script>
+
+<div id="editor">
+    print(123)
+</div>
+
 </body>
