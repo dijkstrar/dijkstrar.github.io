@@ -3,30 +3,19 @@ title: 'Monopoly test'
 date: 2020-08-17 
 permalink: /portfolio/2020/08/Monopoly/ 
 ---
-<head>
-<script src="/brython.js"></script>
-</head>
+<script type="text/javascript" src="/src/brython.js"></script>
+<body onload="brython(1)">
 
-<body onload="brython()">
-
-
-<button id="btn">Run Python Test</button>
-
-
-<script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/stable/www/src/brython.js"></script>
-<script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/stable/www/src/brython_stdlib.js"></script>
 <script type="text/python">
-    from browser import doc, window
-    from browser import html
+from browser import document, alert
 
-    def exec_python():
-        exec(doc['editor'].value)
+def echo(ev):
+    alert("Hello {} !".format(document["zone"].value))
 
-    doc['btn'].bind('click', exec_python)
+document["test"].bind("click", echo)
 </script>
-
-<div id="editor">
-    print(123)
-</div>
-
+<p>Your name is : <input id="zone" autocomplete="off">
+<button id="test">click !</button>
 </body>
+
+TESTTTT
