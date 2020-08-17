@@ -3,6 +3,11 @@ title: 'Monopoly test'
 date: 2020-08-17 
 permalink: /portfolio/2020/08/Monopoly/ 
 ---
+<head>
+<script src="/brython.js"></script>
+</head>
+
+<body onload="brython()">
 
 <div id="editor">
     print(123)
@@ -21,3 +26,4 @@ permalink: /portfolio/2020/08/Monopoly/
 
     doc['btn'].bind('click', exec_python)
 </script>
+</body>
