@@ -8,6 +8,7 @@ permalink: /portfolio/2020/08/Monopoly/
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
 <script src="http://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script> 
 <script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script> 
+<script src="http://skulpt.org/static/skulpt.min.js" type="text/javascript"></script> <script src="http://skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script> 
 
 <script type="text/javascript"> 
 function outf(text) { 
@@ -42,12 +43,12 @@ function runit() {
 <h3>Try This</h3> 
 <form> 
 <textarea id="yourcode" cols="40" rows="10">
-import turtle
+import turtle\n
 
-t = turtle.Turtle()
-t.forward(100)
+t = turtle.Turtle()\n
+t.forward(100)\n
 
-print "Hello World" 
+print "Hello World"\n 
 </textarea><br /> 
 <button type="button" onclick="runit()">Run</button> 
 </form> 
