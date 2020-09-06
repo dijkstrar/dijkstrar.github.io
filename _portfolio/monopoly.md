@@ -5,9 +5,10 @@ permalink: /portfolio/2020/08/Monopoly/
 ---
 <script src="http://skulpt.org/static/skulpt.min.js" type="text/javascript">{newline}</script> 
 <script src="http://skulpt.org/static/skulpt-stdlib.js" type="text/javascript">{newline}</script>
+<script src="https://rawcdn.githack.com/skulpt/skulpt-dist/30ef3d92aa4d45f22286effe445e4448a2d057d9/skulpt.js" type="text/javascript" module>{newline}</script>
+<script src="https://rawcdn.githack.com/skulpt/skulpt-dist/30ef3d92aa4d45f22286effe445e4448a2d057d9/skulpt-stdlib.js" type="text/javascript" module>{newline}</script>
 
 
- 
 
 <script type="text/javascript"> 
 function outf(text) { 
