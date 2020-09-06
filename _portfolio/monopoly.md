@@ -10,8 +10,6 @@ permalink: /portfolio/2020/08/Monopoly/
 <script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script> 
 
 <script type="text/javascript"> 
-// output functions are configurable.  This one just appends some text
-// to a pre element.
 function outf(text) { 
     var mypre = document.getElementById("output"); 
     mypre.innerHTML = mypre.innerHTML + text; 
@@ -22,11 +20,6 @@ function builtinRead(x) {
     return Sk.builtinFiles["files"][x];
 }
 
-// Here's everything you need to run a python program in skulpt
-// grab the code from your textarea
-// get a reference to your pre element for output
-// configure the output function
-// call Sk.importMainWithBody()
 function runit() { 
    var prog = document.getElementById("yourcode").value; 
    var mypre = document.getElementById("output"); 
@@ -48,7 +41,8 @@ function runit() {
 
 <h3>Try This</h3> 
 <form> 
-<textarea id="yourcode" cols="40" rows="10">import turtle
+<textarea id="yourcode" cols="40" rows="10">
+import turtle
 
 t = turtle.Turtle()
 t.forward(100)
