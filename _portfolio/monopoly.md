@@ -3,12 +3,12 @@ title: 'Monopoly test'
 date: 2020-08-17 
 permalink: /portfolio/2020/08/Monopoly/ 
 ---
-<!-- <script src="https://skulpt.org/static/skulpt.min.js" type="text/javascript">{newline}</script> 
-<script src="https://skulpt.org/static/skulpt-stdlib.js" type="text/javascript">{newline}</script> -->
+<script src="https://github.com/dijkstrar/dijkstrar.github.io/blob/master/assets/js/skulpt.min.js" type="text/javascript">{newline}</script> 
+<script src="https://github.com/dijkstrar/dijkstrar.github.io/blob/master/assets/js/skulpt-stdlib.js" type="text/javascript">{newline}</script>
 
-<script src="assets\js\skulpt.js" type="text/javascript">{newline}</script> 
+<!-- <script src="assets\js\skulpt.js" type="text/javascript">{newline}</script> 
 <script src="assets\js\skulpt-stdlib.js" type="text/javascript">{newline}</script> 
-<script src="assets\js\skulpt.min.js" type="text/javascript">{newline}</script> 
+<script src="assets\js\skulpt.min.js" type="text/javascript">{newline}</script>  -->
 
 
 <script type="text/javascript"> 
