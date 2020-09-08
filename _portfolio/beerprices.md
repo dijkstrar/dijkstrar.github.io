@@ -4,7 +4,7 @@ date: 2020-08-25
 permalink: /portfolio/2020/08/beerprices/ 
 ---
 
-History of beer prices and an overview on where to get the cheapest beer. Updated at: 2020/09/07 09:00
+History of beer prices and an overview on where to get the cheapest beer. Updated at: 2020/09/08 09:00
 
 This is a dynamically updating web page.
 
