@@ -7,7 +7,7 @@ permalink: /portfolio/2020/08/Monopoly/
           // set the pyodide files URL (packages.json, pyodide.asm.data etc)
           window.languagePluginUrl = 'https://pyodide-cdn2.iodide.io/v0.15.0/full/';
       </script>
-      <script src="https://pyodide-cdn2.iodide.io/v0.15.0/full/pyodide.js"></script>
+<script src="https://pyodide-cdn2.iodide.io/v0.15.0/full/pyodide.js"></script>
 
 
 <script type="text/javascript">
