@@ -9,9 +9,9 @@ permalink: /portfolio/2020/08/Monopoly/
       </script>
 <script src="https://pyodide-cdn2.iodide.io/v0.15.0/full/pyodide.js"></script>
 
-
 <script type="text/javascript">
       languagePluginLoader.then(() => {
+      pyodide.loadPackage(['matplotlib']).then(() => {
           pyodide.runPython(`
                 import matplotlib.pyplot as plt
                 plt.scatter([0,1],[1,0])
@@ -23,9 +23,12 @@ permalink: /portfolio/2020/08/Monopoly/
                 `
                 );
 
-            document.getElementById("pyplotfigure").src=pyodide.globals.img_str
-      });
+          document.getElementById("pyplotfigure").src=pyodide.globals.img_str
 
-    </script>
+      });});
+
+</script>
+
+
 <div id="textfield">A matplotlib figure:</div>
 <div id="pyplotdiv"><img id="pyplotfigure"/></div>
