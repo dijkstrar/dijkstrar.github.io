@@ -19,6 +19,7 @@ permalink: /portfolio/2020/08/Monopoly/
                 buf = io.BytesIO()
                 fig.savefig(buf, format='png')
                 buf.seek(0)
+                print('works')
                 img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')
                 `
                 );
