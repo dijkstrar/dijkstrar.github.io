@@ -11,16 +11,14 @@ permalink: /portfolio/2020/08/Monopoly/
 
 <script type="text/javascript">
       languagePluginLoader.then(() => {
-      pyodide.loadPackage(['matplotlib']).then(() => {
+      pyodide.loadPackage(['urllib.request','json']).then(() => {
           pyodide.runPython(`
-                import matplotlib.pyplot as plt
-                plt.scatter([0,1],[1,0])
-                import io, base64
-                buf = io.BytesIO()
-                fig.savefig(buf, format='png')
-                buf.seek(0)
-                print('works')
-                img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')
+                import urllib.request, json 
+                  with urllib.request.urlopen('http://ipinfo.io/json') as url:
+                        data = json.loads(url.read().decode())
+                        data['latitude'] = data['loc'].split(',')[0]
+                        data['longitude']=data['loc'].split(',')[1]
+                        print(data)
                 `
                 );
 
