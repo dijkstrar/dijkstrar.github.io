@@ -44,7 +44,7 @@ For my latest beer, the following scheme was used.
 After boiling, the wort is cooled to 20°C, as to make sure the added yeast does not immediately die.
 As I do not have platecoolers or cooling-specific equipment, my beer gets cooled with the help of an ice-bath.
 
-<img src="/images/brewing/koelen.jpeg" height="206" width="240" >
+<img src="/images/brewing/Koelen.jpeg" height="206" width="240" >
 
 Finally the wort gets added to the fermenter and so the wait begins. The yeast ensures that the added and extracted sugar get converted to alcohol. The yeast greatly determines a portion of the taste of the final beer, as there exists a wide variety of yeasts, with wich I am still experimenting. An overview of multiple yeasts and taste-profiles can be found [here](https://www.beercraftr.com/beer-yeast-list/).
 A watergate gets added to the fermenter, to ensure that produced CO2 can safely leave the fermenter, without oxygen and bacteria entering the fermenter. Working clean is very important, as beer in the fermenter can get infected easily. 
