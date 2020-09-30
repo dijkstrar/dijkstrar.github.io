@@ -13,7 +13,7 @@ permalink: /portfolio/2020/08/Monopoly/
       languagePluginLoader.then(() => {
       pyodide.loadPackage(['urllib.request','json']).then(() => {
           pyodide.runPython(`
-                import urllib.request, json 
+                  import urllib.request, json 
                   with urllib.request.urlopen('http://ipinfo.io/json') as url:
                         data = json.loads(url.read().decode())
                         data['latitude'] = data['loc'].split(',')[0]
@@ -22,12 +22,12 @@ permalink: /portfolio/2020/08/Monopoly/
                 `
                 );
 
-          document.getElementById("pyplotfigure").src=pyodide.globals.img_str
+          document.getElementById("textfield").innerText = pyodide.globals.data;
+      //     document.getElementById("pyplotfigure").src=pyodide.globals.img_str
 
       });});
 
 </script>
 
 
-<div id="textfield">A matplotlib figure:</div>
-<div id="pyplotdiv"><img id="pyplotfigure"/></div>
+<div id="textfield"></div>
