@@ -24,3 +24,4 @@ $.get("https://ipinfo.io/json", function (response) {
 <hr/>Full response: <pre id="details"></pre>
 
 
+<div id="details"></div>
