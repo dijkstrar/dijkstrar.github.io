@@ -28,7 +28,8 @@ Full Response:
 <div id="details"></div> -->
 
 
-Plot the map please :)
+Plot the map please :) alles is imported nu
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 <div id="osm-map"></div>
