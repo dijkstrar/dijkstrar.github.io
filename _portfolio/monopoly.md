@@ -40,6 +40,7 @@ Plot the map please
 //     long_lat = (response.loc);
 //     $("#details").html(JSON.stringify(response, null, 4));
 // }, "jsonp");
+console.log('Test')
 setTimeout(() => {
 var element = document.getElementById('osm-map');
       element.style = 'height:300px;';
