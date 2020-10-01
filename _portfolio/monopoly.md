@@ -6,6 +6,7 @@ permalink: /portfolio/2020/09/my-ip/
 
 
 <h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
+updated?
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
