@@ -10,7 +10,24 @@ updated?
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$.get("https://ipinfo.io/json", function (response) {
+    $("#ip").html("IP: " + response.ip);
+    $("#address").html("Location: " + response.city + ", " + response.region);
+    long_lat = (response.loc);
+    $("#loc").html(response.loc)
+    $("#details").html(JSON.stringify(response, null, 4));
+}, "jsonp");
+</script>
+# Location Details
+<div id="ip"></div>
+<div id="address"></div>
+<div id="loc"></div>
+
+Full Response:
+<div id="details"></div>
+
+
 
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
@@ -37,10 +54,3 @@ var element = document.getElementById('osm-map');
 
 </script>
 
-# Location Details
-<div id="ip"></div>
-<div id="address"></div>
-<div id="loc"></div>
-
-Full Response:
-<div id="details"></div>
