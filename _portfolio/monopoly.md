@@ -32,7 +32,7 @@ var element = document.getElementById('osm-map');
       var target = L.latLng(long_lat.split(','));
       map.setView(target, 14);
       L.marker(target).addTo(map);
-}, 150); //Wait 150 ms plotting to get json object.
+}, 1500); //Wait 1500 ms plotting to get json object.
 
 </script>
 
