@@ -6,10 +6,10 @@ permalink: /portfolio/2020/09/my-ip/
 
 
 <h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
-updated 1255
+update 1259, loc info erbij
 
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $.get("https://ipinfo.io/json", function (response) {
     $("#ip").html("IP: " + response.ip);
@@ -25,10 +25,10 @@ $.get("https://ipinfo.io/json", function (response) {
 <div id="loc"></div>
 
 Full Response:
-<div id="details"></div> -->
+<div id="details"></div>
 
 
-Plot the map please :) alles is imported nu
+# Your Location
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
@@ -55,6 +55,5 @@ var element = document.getElementById('osm-map');
 
 </script>
 
-Tijdelijk comment is verdwenene, moet nu werken.
 
 
