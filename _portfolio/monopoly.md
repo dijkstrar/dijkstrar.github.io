@@ -6,7 +6,7 @@ permalink: /portfolio/2020/09/my-ip/
 
 
 <h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
-updated 1252
+updated 1255
 
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -33,7 +33,13 @@ Plot the map please :)
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 <div id="osm-map"></div>
 <script>
-console.log('Test');
+var long_lat;
+$.get("https://ipinfo.io/json", function (response) {
+    $("#ip").html("IP: " + response.ip);
+    $("#address").html("Location: " + response.city + ", " + response.region);
+    long_lat = (response.loc);
+    $("#details").html(JSON.stringify(response, null, 4));
+}, "jsonp");
 setTimeout(() => {
 var element = document.getElementById('osm-map');
       element.style = 'height:300px;';
@@ -41,19 +47,13 @@ var element = document.getElementById('osm-map');
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-      var target = L.latLng(100,200);
+      var target = L.latLng(long_lat.split(','));
       map.setView(target, 14);
       L.marker(target).addTo(map);
 }, 4000); //Wait 1500 ms plotting to get json object.
 
 </script>
 
-Tijdelijk comment
-<!-- // var long_lat;
-// $.get("https://ipinfo.io/json", function (response) {
-//     $("#ip").html("IP: " + response.ip);
-//     $("#address").html("Location: " + response.city + ", " + response.region);
-//     long_lat = (response.loc);
-//     $("#details").html(JSON.stringify(response, null, 4));
-// }, "jsonp"); -->
+Tijdelijk comment is verdwenene, moet nu werken.
+
 
