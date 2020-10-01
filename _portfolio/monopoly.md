@@ -33,7 +33,7 @@ Plot the map please :)
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 <div id="osm-map"></div>
 <script>
-console.log('Test')
+console.log('Test');
 setTimeout(() => {
 var element = document.getElementById('osm-map');
       element.style = 'height:300px;';
