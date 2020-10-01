@@ -29,7 +29,7 @@ Full Response:
 
 
 
-<!-- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 <div id="osm-map"></div>
 <script>// Where you want to render the map.
@@ -47,10 +47,11 @@ var element = document.getElementById('osm-map');
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-      var target = L.latLng(long_lat.split(','));
+      var target = L.latLng(long_lat.split(100,10);
+      // var target = L.latLng(long_lat.split(','));
       map.setView(target, 14);
       L.marker(target).addTo(map);
 }, 1500); //Wait 1500 ms plotting to get json object.
 
-</script> -->
+</script>
 
