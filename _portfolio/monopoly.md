@@ -6,7 +6,7 @@ permalink: /portfolio/2020/09/my-ip/
 
 
 <h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
-updated?
+updated 1252
 
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,18 +28,11 @@ Full Response:
 <div id="details"></div> -->
 
 
-Plot the map please
+Plot the map please :)
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 <div id="osm-map"></div>
 <script>
-// var long_lat;
-// $.get("https://ipinfo.io/json", function (response) {
-//     $("#ip").html("IP: " + response.ip);
-//     $("#address").html("Location: " + response.city + ", " + response.region);
-//     long_lat = (response.loc);
-//     $("#details").html(JSON.stringify(response, null, 4));
-// }, "jsonp");
 console.log('Test')
 setTimeout(() => {
 var element = document.getElementById('osm-map');
@@ -54,4 +47,13 @@ var element = document.getElementById('osm-map');
 }, 4000); //Wait 1500 ms plotting to get json object.
 
 </script>
+
+Tijdelijk comment
+<!-- // var long_lat;
+// $.get("https://ipinfo.io/json", function (response) {
+//     $("#ip").html("IP: " + response.ip);
+//     $("#address").html("Location: " + response.city + ", " + response.region);
+//     long_lat = (response.loc);
+//     $("#details").html(JSON.stringify(response, null, 4));
+// }, "jsonp"); -->
 
