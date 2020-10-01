@@ -29,7 +29,7 @@ Full Response:
 
 
 
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<!-- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 <div id="osm-map"></div>
 <script>// Where you want to render the map.
@@ -52,5 +52,5 @@ var element = document.getElementById('osm-map');
       L.marker(target).addTo(map);
 }, 1500); //Wait 1500 ms plotting to get json object.
 
-</script>
+</script> -->
 
