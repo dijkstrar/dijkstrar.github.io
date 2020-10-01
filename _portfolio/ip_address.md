@@ -3,7 +3,7 @@ title: 'Show My Ip'
 date: 2020-09-30 
 permalink: /portfolio/2020/09/my-ip/ 
 ---
-Basic script with which users can check their location. IP-addresses and geolocations are gathered from [http://ipinfo.io] and are displayed with the help of Leaflet's open-streetmap source ([https://leafletjs.com/]).
+Basic script with which users can check their location. IP-addresses and geolocations are gathered from <http://ipinfo.io> and are displayed with the help of Leaflet's open-streetmap source ( <https://leafletjs.com/> ).
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -16,7 +16,7 @@ $.get("https://ipinfo.io/json", function (response) {
 }, "jsonp");
 </script>
 # Location Details
-**User's IP-Address and other features are extracted from [http://ipinfo.io].**
+**User's IP-Address and other features are extracted from <http://ipinfo.io>.**
 <div id="ip"></div>
 <div id="address"></div>
 <div id="loc"></div>
