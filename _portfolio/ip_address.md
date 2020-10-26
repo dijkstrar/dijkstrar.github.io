@@ -49,9 +49,12 @@ var element = document.getElementById('osm-map');
       var target = L.latLng(long_lat.split(','));
       map.setView(target, 14);
       L.marker(target).addTo(map);
-}, 4000); //Wait 1500 ms plotting to get json object.
+}, 4000); //Wait 4000 ms plotting to get json object.
 
 </script>
+
+
+<!-- to do: invulveld voor ip address en plot die locatie dan!! -->
 
 
 
