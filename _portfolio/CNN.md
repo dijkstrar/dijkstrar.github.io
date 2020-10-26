@@ -10,7 +10,7 @@ Trial of CNN
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 <button onclick="predict(canvas)">Predict!</button> 
 <button onclick="erase(canvas)">Erase!</button> 
-<script> 
+<script type="text/javascript"> 
 function create_container() {
     // Creates a new canvas element and appends it as a child
     // to the parent element, and returns the reference to
