@@ -4,17 +4,15 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-Trial of CNN
+Trial of CNN new
 
 <div id="canvas">Click to draw<br/></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 <button onclick="predict(canvas)">Predict!</button> 
 <button onclick="erase(canvas)">Erase!</button> 
+
 <script type="text/javascript"> 
 function create_container() {
-    // Creates a new canvas element and appends it as a child
-    // to the parent element, and returns the reference to
-    // the newly created canvas element
     function createCanvas(parent, width, height) {
         var canvas = {};
         canvas.node = document.createElement('canvas');
@@ -27,7 +25,7 @@ function create_container() {
     function init(container, width, height, fillColor) {
         var canvas = createCanvas(container, width, height);
         var ctx = canvas.context;
-        // define a custom fillCircle method
+        
         ctx.fillCircle = function(x, y, radius, fillColor) {
             this.fillStyle = fillColor;
             this.beginPath();
@@ -40,14 +38,14 @@ function create_container() {
             ctx.fillRect(0, 0, width, height);
         };
         ctx.clearTo(fillColor || "#ddd");
-        // bind mouse events
+        
         canvas.node.onmousemove = function(e) {
             if (!canvas.isDrawing) {
                return;
             }
             var x = e.pageX - this.offsetLeft;
             var y = e.pageY - this.offsetTop;
-            var radius = 10; // or whatever
+            var radius = 10; 
             var fillColor = '#FF0000';
             ctx.fillCircle(x, y, radius, fillColor);
         };
