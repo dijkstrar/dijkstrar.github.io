@@ -1,6 +1,6 @@
 --- 
 title: 'CNN' 
-date: 2020-010-24 
+date: 2020-10-24 
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
