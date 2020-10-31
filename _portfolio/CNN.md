@@ -4,7 +4,7 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-Trial of CNN new (!)
+Trial of CNN new (!) Only canvas now!
 
 <div id="canvas">Click to draw<br/></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
@@ -74,38 +74,6 @@ function create_container() {
 }
 
 var canvas = create_container();
-
-// function predict(canvas){
-//     var gfg = canvas.node.getContext("2d")
-//     var g =  gfg.getImageData(0, 0, 200, 200); 
-//     const tens = tf.browser.fromPixels(g,1).resizeNearestNeighbor([28, 28]).div(255)
-//     console.log(tens.print())
-//     console.log(tens.shape)
-//     console.log('going to load model')
-//     let model = load_model();
-//     console.log('finished loading')
-
-//     model.then(model => {
-//         const prediction = model.predict(tens.reshape([1, 28, 28, 1]),);
-//         console.log('done?')
-//         console.log(prediction);
-//     });
-
-// }
-
-// async function load_model() {
-//     let m = await tf.loadLayersModel('files\model.json')
-//     console.log(typeof m)
-//     console.log('loading?')
-//     return m;
-// }
-
-// let model = load_model();
-
-// function erase(canvas){
-//     const context = canvas.node.getContext('2d');
-//     context.clearRect(0, 0, canvas.node.width, canvas.node.height);
-// }
 </script>
 
 <button onclick="predict(canvas)">Predict!</button> 
