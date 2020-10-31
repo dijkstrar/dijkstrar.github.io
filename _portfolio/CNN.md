@@ -71,18 +71,23 @@ var canvas = create_container();
 </script>
 
 <script>
-async function load_model() {
-    let m = await tf.loadLayersModel('model.json')
-    console.log(typeof m)
-    console.log('loading?')
-    return m;
-}
-
 function erase(canvas){
     const context = canvas.node.getContext('2d');
     context.clearRect(0, 0, canvas.node.width, canvas.node.height);
 }
+</script>
 
+<script>
+async function load_model() {
+    let m = await tf.loadLayersModel('files\model.json')
+    console.log(typeof m)
+    console.log('loading?')
+    return m;
+}
+</script>
+
+
+<script>
 function predict(canvas){
     var gfg = canvas.node.getContext("2d")
     var g =  gfg.getImageData(0, 0, 200, 200); 
