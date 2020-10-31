@@ -68,7 +68,7 @@ function erase(canvas){
     const context = canvas.node.getContext('2d');
     context.clearRect(0, 0, canvas.node.width, canvas.node.height);
     context.strokeStyle="#000000";
-    context.strokeRect(0, 0, width, height);
+    context.strokeRect(0, 0, canvas.node.width, canvas.node.height);
 }
 </script>
 
@@ -90,7 +90,7 @@ function predict(canvas){
     model.then(model => {
         const prediction = model.predict(tens.reshape([1, 28, 28, 1]),);
         console.log(prediction.print());
-        console.log(arr.indexOf(Math.max.apply(Math, prediction)))
+        console.log(prediction.indexOf(Math.max.apply(Math, prediction)))
     });
 }
 </script>
