@@ -8,11 +8,15 @@ Trial of CNN new
 
 <div id="canvas">Click to draw<br/></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-<button onclick="predict(canvas)">Predict!</button> 
-<button onclick="erase(canvas)">Erase!</button> 
 
-<script type="text/javascript"> 
+<script>
 function create_container() {
+
+    // Creates a new canvas element and appends it as a child
+    // to the parent element, and returns the reference to
+    // the newly created canvas element
+
+
     function createCanvas(parent, width, height) {
         var canvas = {};
         canvas.node = document.createElement('canvas');
@@ -22,10 +26,11 @@ function create_container() {
         parent.appendChild(canvas.node);
         return canvas;
     }
+
     function init(container, width, height, fillColor) {
         var canvas = createCanvas(container, width, height);
         var ctx = canvas.context;
-        
+        // define a custom fillCircle method
         ctx.fillCircle = function(x, y, radius, fillColor) {
             this.fillStyle = fillColor;
             this.beginPath();
@@ -38,14 +43,15 @@ function create_container() {
             ctx.fillRect(0, 0, width, height);
         };
         ctx.clearTo(fillColor || "#ddd");
-        
+
+        // bind mouse events
         canvas.node.onmousemove = function(e) {
             if (!canvas.isDrawing) {
                return;
             }
             var x = e.pageX - this.offsetLeft;
             var y = e.pageY - this.offsetTop;
-            var radius = 10; 
+            var radius = 10; // or whatever
             var fillColor = '#FF0000';
             ctx.fillCircle(x, y, radius, fillColor);
         };
@@ -57,11 +63,14 @@ function create_container() {
         };
         return canvas
     }
+
     var container = document.getElementById('canvas');
     var canvas  = init(container, 200,200, '#0000');
 		return canvas
 }
+
 var canvas = create_container();
+
 function predict(canvas){
 var gfg = canvas.node.getContext("2d")
 var g =  gfg.getImageData(0, 0, 200, 200); 
@@ -71,19 +80,30 @@ console.log(tens.shape)
 console.log('going to load model')
 let model = load_model();
 console.log('finished loading')
+
 model.then(model => {
     const prediction = model.predict(tens.reshape([1, 28, 28, 1]),);
     console.log('done?')
-    console.log(prediction);});}
+    console.log(prediction);
+});
+
+
+
+}
+
 async function load_model() {
     let m = await tf.loadLayersModel('files\model.json')
     console.log(typeof m)
     console.log('loading?')
     return m;
 }
+
 let model = load_model();
+
 function erase(canvas){
 const context = canvas.node.getContext('2d');
 context.clearRect(0, 0, canvas.node.width, canvas.node.height);
 }
 </script>
+<button onclick="predict(canvas)">Predict!</button> 
+<button onclick="erase(canvas)">Erase!</button> 
