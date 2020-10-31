@@ -24,7 +24,7 @@ function create_container() {
     function init(container, width, height, fillColor) {
         var canvas = createCanvas(container, width, height);
         var ctx = canvas.context;
-        // define a custom fillCircle method
+        
         ctx.fillCircle = function(x, y, radius, fillColor) {
             this.fillStyle = fillColor;
             this.beginPath();
@@ -38,14 +38,14 @@ function create_container() {
         };
         ctx.clearTo(fillColor || "#ddd");
 
-        // bind mouse events
+        
         canvas.node.onmousemove = function(e) {
             if (!canvas.isDrawing) {
                return;
             }
             var x = e.pageX - this.offsetLeft;
             var y = e.pageY - this.offsetTop;
-            var radius = 10; // or whatever
+            var radius = 10; 
             var fillColor = '#FF0000';
             ctx.fillCircle(x, y, radius, fillColor);
         };
