@@ -11,12 +11,6 @@ Trial of CNN new (!) Only canvas now!
 
 <script>
 function create_container() {
-
-    // Creates a new canvas element and appends it as a child
-    // to the parent element, and returns the reference to
-    // the newly created canvas element
-
-
     function createCanvas(parent, width, height) {
         var canvas = {};
         canvas.node = document.createElement('canvas');
