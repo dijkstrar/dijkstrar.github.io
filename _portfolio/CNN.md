@@ -8,7 +8,7 @@ Trial of CNN new (!) Only canvas now!
 
 <div id="canvas">Click to draw<br/></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-
+<body>
 <script>
 function create_container() {
     function createCanvas(parent, width, height) {
@@ -20,11 +20,9 @@ function create_container() {
         parent.appendChild(canvas.node);
         return canvas;
     }
-
     function init(container, width, height, fillColor) {
         var canvas = createCanvas(container, width, height);
         var ctx = canvas.context;
-        
         ctx.fillCircle = function(x, y, radius, fillColor) {
             this.fillStyle = fillColor;
             this.beginPath();
@@ -37,8 +35,6 @@ function create_container() {
             ctx.fillRect(0, 0, width, height);
         };
         ctx.clearTo(fillColor || "#ddd");
-
-        
         canvas.node.onmousemove = function(e) {
             if (!canvas.isDrawing) {
                return;
@@ -58,15 +54,12 @@ function create_container() {
         ctx.lineWidth = 2;
 				ctx.strokeStyle="#000000";
 				ctx.strokeRect(0, 0, width, height);
-         
         return canvas
     }
-
     var container = document.getElementById('canvas');
     var canvas  = init(container, 200,200, '#0000');
 		return canvas
 }
-
 var canvas = create_container();
 </script>
 
@@ -86,7 +79,6 @@ async function load_model() {
 }
 </script>
 
-
 <script>
 function predict(canvas){
     var gfg = canvas.node.getContext("2d")
@@ -103,10 +95,9 @@ function predict(canvas){
         console.log('done?')
         console.log(prediction);
     });
-
 }
 </script>
 
-
 <button onclick="predict(canvas)">Predict!</button> 
 <button onclick="erase(canvas)">Erase!</button> 
+</body>
