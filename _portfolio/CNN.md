@@ -89,8 +89,8 @@ function predict(canvas){
 
     model.then(model => {
         const prediction = model.predict(tens.reshape([1, 28, 28, 1]),);
-        console.log(prediction.array());
-        console.log(prediction.array().indexOf(Math.max.apply(Math, prediction.array())))
+        console.log(Array.from(prediction.dataSync()));
+        console.log(Array.from(prediction.dataSync()).indexOf(Math.max.apply(Math, Array.from(prediction.dataSync()))));
     });
 }
 </script>
