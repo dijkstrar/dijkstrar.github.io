@@ -72,7 +72,7 @@ function erase(canvas){
 
 <script>
 async function load_model() {
-    let m = await tf.loadLayersModel('../files/model.json');
+    let m = await tf.loadLayersModel('../../../../files/model.json');
     console.log(typeof m);
     console.log('loading?');
     return m;
