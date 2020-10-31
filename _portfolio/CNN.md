@@ -72,7 +72,7 @@ function erase(canvas){
 
 <script>
 async function load_model() {
-    let m = await tf.loadLayersModel('../../../../files/model.json');
+    let m = await tf.loadLayersModel('http://github.com/dijkstrar/dijkstrar.github.io/blob/master/files/model.json',{weightPathPrefix: 'http://github.com/dijkstrar/dijkstrar.github.io/blob/master/files/group1-shard1of1.bin'});
     console.log(typeof m);
     console.log('loading?');
     return m;
