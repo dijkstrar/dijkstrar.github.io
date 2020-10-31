@@ -72,27 +72,27 @@ function erase(canvas){
 
 <script>
 async function load_model() {
-    let m = await tf.loadLayersModel('files\model.json')
-    console.log(typeof m)
-    console.log('loading?')
+    let m = await tf.loadLayersModel('files\model.json');
+    console.log(typeof m);
+    console.log('loading?');
     return m;
 }
 </script>
 
 <script>
 function predict(canvas){
-    var gfg = canvas.node.getContext("2d")
+    var gfg = canvas.node.getContext("2d");
     var g =  gfg.getImageData(0, 0, 200, 200); 
-    const tens = tf.browser.fromPixels(g,1).resizeNearestNeighbor([28, 28]).div(255)
-    console.log(tens.print())
-    console.log(tens.shape)
-    console.log('going to load model')
+    const tens = tf.browser.fromPixels(g,1).resizeNearestNeighbor([28, 28]).div(255);
+    console.log(tens.print());
+    console.log(tens.shape);
+    console.log('going to load model');
     let model = load_model();
-    console.log('finished loading')
+    console.log('finished loading');
 
     model.then(model => {
         const prediction = model.predict(tens.reshape([1, 28, 28, 1]),);
-        console.log('done?')
+        console.log('done?');
         console.log(prediction);
     });
 }
