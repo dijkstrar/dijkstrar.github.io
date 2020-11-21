@@ -4,7 +4,7 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-updated, should work now 4.0
+updated, should work now 5.0
 
 
 
@@ -114,7 +114,7 @@ function determine_colors(arr){
         else newArr.push('#666a70');
     }
     return newArr;
- }
+}
 </script>
 
 <script>
