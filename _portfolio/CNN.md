@@ -4,7 +4,7 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-Trial of CNN new (!) Only canvas now!
+updated, should work now.
 
 
 
