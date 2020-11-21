@@ -4,7 +4,7 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-updated, should work now 2.0
+updated, should work now 3.0
 
 
 
@@ -110,7 +110,7 @@ function determine_colors(arr){
     for(i=0; i<arr.length; i++){
     	if (arr[i]==max_num){
         	newArr.push('#000000');
-          }
+        }
         else newArr.push('#666a70');
     }
     return newArr;
