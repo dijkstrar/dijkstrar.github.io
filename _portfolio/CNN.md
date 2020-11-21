@@ -4,7 +4,7 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-updated, should work now.
+updated, should work now 2.0
 
 
 
@@ -103,14 +103,12 @@ async function predict(canvas){
 }
 </script>
 
-
-
 <script>
 function determine_colors(arr){
 	max_num = Math.max.apply(Math, arr)
     newArr =[];
     for(i=0; i<arr.length; i++){
-    		if (arr[i]==max_num){
+    	if (arr[i]==max_num){
         	newArr.push('#000000');
           }
         else newArr.push('#666a70');
