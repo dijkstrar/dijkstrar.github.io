@@ -136,7 +136,7 @@ async function create_chart(prediction){
         	datasets: [
         			{
           label: "Probability",
-          //backgroundColor: determine_colors(prediction),
+          backgroundColor: determine_colors(prediction),
           data: convert(prediction)
         }
       ]
