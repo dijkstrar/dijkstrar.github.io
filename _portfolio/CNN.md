@@ -1,13 +1,6 @@
---- 
-title: 'CNN' 
-date: 2020-10-24 
-permalink: /portfolio/2020/10/CNN/ 
----
-
-Trial of CNN new (!) Only canvas now!
-
 <div id="canvas">Click to draw<br/></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <body>
 <script>
 function create_container() {
@@ -69,6 +62,10 @@ function erase(canvas){
     context.clearRect(0, 0, canvas.node.width, canvas.node.height);
     context.strokeStyle="#000000";
     context.strokeRect(0, 0, canvas.node.width, canvas.node.height);
+    
+   	this.bar_chart_object.destroy();
+    
+    
 }
 </script>
 
@@ -80,7 +77,7 @@ async function load_model() {
 </script>
 
 <script>
-function predict(canvas){
+async function predict(canvas){
     var gfg = canvas.node.getContext("2d");
     var g =  gfg.getImageData(0, 0, 200, 200); 
     const tens = tf.browser.fromPixels(g,1).resizeNearestNeighbor([28, 28]).div(255);
@@ -89,12 +86,91 @@ function predict(canvas){
 
     model.then(model => {
         const prediction = model.predict(tens.reshape([1, 28, 28, 1]),);
-        console.log(Array.from(prediction.dataSync()));
-        console.log(Array.from(prediction.dataSync()).indexOf(Math.max.apply(Math, Array.from(prediction.dataSync()))));
+    	create_chart(Array.from(prediction.dataSync()));
+        showChart();
     });
+    
 }
+</script>
+
+
+
+<script>
+function determine_colors(arr){
+		max_num = Math.max.apply(Math, arr)
+    newArr =[];
+    for(i=0; i<arr.length; i++){
+    		if (arr[i]==max_num){
+        	newArr.push('#000000');
+          }
+        else newArr.push('#666a70');
+    }
+    return newArr;
+ }
+</script>
+
+<script>
+function convert(arr){
+    newArr =[];
+    for(i=0; i<arr.length; i++){
+        newArr.push(arr[i].toFixed(2));
+    }
+    return newArr;
+}
+</script>
+
+<script>
+async function create_chart(prediction){
+    bar_chart_object = new Chart(document.getElementById("bar-chart"), {
+        type: 'bar',
+        data: {
+        	labels: Array.from(Array(10).keys()),
+        	datasets: [
+        			{
+          label: "Probability",
+          backgroundColor: determine_colors(prediction),
+          data: convert(prediction)
+        }
+      ]
+        },
+        options: {
+        scales: {
+            xAxes: [{
+                barPercentage: 1,
+                gridLines: {
+                    display:false
+                }
+            }],
+            yAxes: [{
+            ticks: {
+                max: 1},
+                gridLines: {
+                    display:false
+                }   
+            }]
+        },
+        legend: { display: false },
+        responsive: false,
+        maintainAspectRatio: true,
+        title: {
+            display: true,
+            text: 'Predicted Number from Drawing'
+        }
+        }
+    });
+	return bar_chart_object
+}
+</script>
+
+
+<script>
+    function showChart(){
+        document.getElementById('bar-chart').style.display='block';
+    }
 </script>
 
 <button onclick="predict(canvas)">Predict!</button> 
 <button onclick="erase(canvas)">Erase!</button> 
+<div><canvas id="bar-chart"></canvas></div>
+
 </body>
