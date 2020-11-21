@@ -4,7 +4,7 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-updated, should work now 3.0
+updated, should work now 4.0
 
 
 
@@ -136,7 +136,7 @@ async function create_chart(prediction){
         	datasets: [
         			{
           label: "Probability",
-          backgroundColor: determine_colors(prediction),
+          //backgroundColor: determine_colors(prediction),
           data: convert(prediction)
         }
       ]
