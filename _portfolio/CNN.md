@@ -107,7 +107,7 @@ async function predict(canvas){
 
 <script>
 function determine_colors(arr){
-		max_num = Math.max.apply(Math, arr)
+	max_num = Math.max.apply(Math, arr)
     newArr =[];
     for(i=0; i<arr.length; i++){
     		if (arr[i]==max_num){
