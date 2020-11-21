@@ -1,3 +1,13 @@
+--- 
+title: 'CNN' 
+date: 2020-10-24 
+permalink: /portfolio/2020/10/CNN/ 
+---
+
+Trial of CNN new (!) Only canvas now!
+
+
+
 <div id="canvas">Click to draw<br/></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
