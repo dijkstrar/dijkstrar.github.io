@@ -4,7 +4,7 @@ date: 2020-10-24
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-updated, should work now 5.0
+updated, should work now 6.0
 
 
 
@@ -105,7 +105,7 @@ async function predict(canvas){
 
 <script>
 function determine_colors(arr){
-	max_num = Math.max.apply(Math, arr)
+	max_num = Math.max.apply(Math, arr);
     newArr =[];
     for(i=0; i<arr.length; i++){
     	if (arr[i]==max_num){
@@ -166,7 +166,7 @@ async function create_chart(prediction){
         }
         }
     });
-	return bar_chart_object
+	return bar_chart_object;
 }
 </script>
 
