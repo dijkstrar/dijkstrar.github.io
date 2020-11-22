@@ -192,3 +192,4 @@ As for the model itself, a relatively simple CNN has been applied, namely one wi
 
 ### Inaccuracies of the Model
 When drawing digits yourself, it is possible that the trained model will incorrectly classify your drawn digit, this might be due to 'bias' in the training set. The mnist-dataset contains mostly hand-drawn digits, centered in the screen and have a certain style. For example, it is possible to draw a digit in a style the CNN has never seen, and it will for example incorrectly classify (e.g. when drawing a one as '1' instead of |). 
+As for an example of how digits in the mnist-dataset are drawn, pleeas inspect the following examples: ![Getting Started](</images/mnist_examples.PNG>)
