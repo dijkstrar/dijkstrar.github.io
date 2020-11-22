@@ -1,12 +1,13 @@
 --- 
-title: 'CNN' 
+title: 'CNN For Handwritten Digits' 
 date: 2020-10-24 
 permalink: /portfolio/2020/10/CNN/ 
 ---
 
-updated, should work now 6.0
+This page contains a number recognizer. For this project I have created a Convolutional Neural Network (CNN) in order to recognize handwritten digits. The CNN has been trained on the [mnist dataset](https://en.wikipedia.org/wiki/MNIST_database), with a CNN of three convolutional layers, with filter sizes of 5, 4 and 3 (5, 10 and 15 filters). Moreover we activate each convolutional layer with the Relu function, and MaxPool consequently. Below a brief instruction is given on how to use the tool, afterwards you can try it yourself. Lastly, information on model quality and feature engineeering is supplied.
 
-
+#### Instructions
+In order to draw please hold down the left-mouse button in the canvas. The color of the marker will be red. Once you have finished drawing the digit, you can release the left-mouse button and click "Predict!". A plot will be shown which displays the probabilities of classification (e.g. the model is x% sure the drawn digit resembles digit y). Whenever you want to re-draw adjust your drawing or draw another digit, please wipe the canvas, by using the "Erase!" button. After the canvas has been cleared, you can draw again. Pushing buttons multiple times after eachother yields problems, in that case please refresh the site. Try it yourself!
 
 <div id="canvas">Click to draw<br/></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
@@ -182,3 +183,12 @@ async function create_chart(prediction){
 <div><canvas id="bar-chart"></canvas></div>
 
 </body>
+
+### Goal of the Project
+As the scope of this project was to aim to launch a machine learning model, not much attention has been devoted towards selecting the best model. The main goal was to provide an environment in which users can test the machine learning model in an interactive manner. As drawings in a JavaScript canvas do not contain shade, the network had to be trained to handle pixels in which was drawn, irrespective of their color intensity. Therefore, for the sake of feature engineering, all shaded areas of the handwritten digits in the mnist dataset have been decoded into the most intense color within the digit, as displayed below: ![Getting Started](</images/mnist_digit_transformation.PNG>)
+
+### Model Training
+As for the model itself, a relatively simple CNN has been applied, namely one with filter sizes of 5, 4 and 3 ( with respectively 5, 10 and 15 number of filters). After each filter we apply a Relu activation function, and MaxPool over the corresponding result. At the end we create a fully connected layer of size 256, and a sigmoid activation function. Afterwards we derive predictions with the help of the softmax activation function (which assigns probabilities to the digits 0-9 for the drawn digit). As for the training, Adam Optimizer has been used with a learning rate of 0.0005, as to have a proper trade-off between exploitation and exploration. Moreover, a batch-size of 400 has been used, and we train the model for 50 epochs. This training set-up ensures a relatively good model for short training times. It is indeed possible to use a more extensive model, however that would yield more training times, and the increase in accuracy would not be that significant. For the current model, the following model_loss and accuracies have been obtained for the training and validation set:  ![Getting Started](</images/mnist_accuracies.PNG>). As for the test set, an accuracy of 0.9695 has been obtained, which is high! 
+
+### Inaccuracies of the Model
+When drawing digits yourself, it is possible that the trained model will incorrectly classify your drawn digit, this might be due to 'bias' in the training set. The mnist-dataset contains mostly hand-drawn digits, centered in the screen and have a certain style. For example, it is possible to draw a digit in a style the CNN has never seen, and it will for example incorrectly classify (e.g. when drawing a one as '1' instead of |). 
