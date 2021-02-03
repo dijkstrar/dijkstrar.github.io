@@ -1,6 +1,6 @@
 ---
 title: 'Vaccine Allocation Dashboard'
-date: 2020-01-31
+date: 2021-01-31
 permalink: /portfolio/2021/01/vaccine-dashboard/
 ---
 
